@@ -1,19 +1,20 @@
 #include " main.h"
 
 /**
- * printf - function to print to stdout
+ * _printf - function to print to stdout
  *
- * @format: string being passed
+ * @format: string that is passed
  *
- * Return: numb of char to be printed
+ * Return: character to be printed
  */
 
 int _printf(const char *format, ...)
 {
 	va_list arg;
+	int c;
 
 	va_start(arg, format);
 
-	done = vfprintf(stdout, format, arg);
-	return(done);
+	c = vfprintf(stdout, format, arg);
+	return (c);
 }
